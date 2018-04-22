@@ -24,7 +24,7 @@ function start(){
       break;
       case "Add New Product": addNewProduct();
       break;
-      case "End Session": console.log('F**k You Then!');
+      case "End Session": console.log('F**k You Then!'); connection.end()
     }
   });
 }
@@ -59,8 +59,8 @@ function viewLowInventory(){
   console.log('----------------------------------------------------------------------------------------------------')
 
   for(var i = 0; i<res.length;i++){
-    if(res[i].StockQuantity <= 5){
-    console.log("ID: " + res[i].ItemID + " | " + "Product: " + res[i].ProductName + " | " + "Department: " + res[i].DepartmentName + " | " + "Price: " + res[i].Price + " | " + "QTY: " + res[i].StockQuantity);
+    if(res[i].stockQuantity <= 5){
+    console.log("ID: " + res[i].id + " | " + "Product: " + res[i].productName + " | " + "Department: " + res[i].departmentName + " | " + "Price: " + res[i].price + " | " + "QTY: " + res[i].stockQuantity);
     console.log('--------------------------------------------------------------------------------------------------');
     }
   }
