@@ -119,7 +119,7 @@ function addNewProduct(){
   connection.query('SELECT * FROM products', function(err, res){
     if(err) throw err;
     for(var i = 0; i<res.length; i++){
-      deptNames.push(res[i].productName);
+      deptNames.push(res[i].departmentName);
     }
 
 
